@@ -36,14 +36,34 @@ const calcularAlquiler = function (precioAlquiler) {
 };
 
 /*Objeto constructor*/
-function propiedadEnAlquiler(direccion, ambientes, precio) {
+function PropiedadEnAlquiler(direccion, ambientes, precioMensual) {
   this.direccion = direccion;
   this.ambientes = ambientes;
-  this.precio = precio;
+  this.precioMensual = precioMensual;
+
+  this.mostrarNombre = function () {
+    console.log("La dirección del inmueble a alquilar es: " + this.direccion);
+  };
 }
 
-const propiedadEnAlquiler1 = new propiedadEnAlquiler(
+const propiedadEnAlquiler1 = new PropiedadEnAlquiler(
   "Av.Libertador 6299 depto 815",
   2,
   1500
 );
+console.log(propiedadEnAlquiler1);
+const propiedadEnAlquiler2 = new PropiedadEnAlquiler("Guatemala 5500", 2, 1200);
+console.log(propiedadEnAlquiler2);
+const propiedadEnAlquiler3 = new PropiedadEnAlquiler(
+  "Av.Libertador 6100 ",
+  2,
+  600
+);
+console.log(propiedadEnAlquiler3);
+const propiedadEnAlquiler4 = new PropiedadEnAlquiler(
+  "Av. Libertador 6300",
+  2,
+  500
+);
+console.log(propiedadEnAlquiler4);
+PropiedadEnAlquiler.direccion();
